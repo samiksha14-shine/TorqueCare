@@ -1,0 +1,32 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  --color-bg: 8 12 20;           /* Deep navy background */
+  --color-surface: 15 22 35;     /* Card backgrounds */
+  --color-surface-alt: 25 32 45; /* Alternative surface */
+  --color-foreground: 248 250 252; /* Primary text */
+  --color-muted: 148 163 184;    /* Secondary text */
+  --color-accent: 59 130 246;    /* Professional blue */
+  --color-accent-alt: 239 68 68; /* Red accent */
+  --color-success: 34 197 94;    /* Green for status */
+  --color-warning: 245 158 11;   /* Amber for warnings */
+  --color-gold: 251 191 36;      /* Premium gold */
+}
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html, body, #root { height: 100%; }
+body { 
+  background-color: rgb(var(--color-bg)); 
+  color: rgb(var(--color-foreground));
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: rgb(var(--color-bg)); }
+::-webkit-scrollbar-thumb { background: rgb(var(--color-accent)); border-radius: 3px; }
