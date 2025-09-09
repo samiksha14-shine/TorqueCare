@@ -1,5 +1,6 @@
 /* src/routes/Home.tsx - Fixed Alignment */
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom'
 import TrustBadges from '@/components/TrustBadges';
 import StatsSection from '@/components/StatsSection';
 import ServicesGrid from '@/components/ServicesGrid';
@@ -82,27 +83,25 @@ export default function Home() {
                   </div>
 
                   {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                    <motion.a 
-                      href="/contact"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-8 py-4 text-lg font-bold text-white transition-all hover:bg-accent/90 shadow-xl"
-                    >
-                      Book Service Now
-                      <span>→</span>
-                    </motion.a>
-                    
-                    <motion.a
-                      href="/services"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/40 px-8 py-4 text-lg font-bold text-white transition-all hover:bg-white/10"
-                    >
-                      View Services
-                    </motion.a>
-                  </div>
+                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
+  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    <Link
+      to="/contact"
+      className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-8 py-4 text-lg font-bold text-white transition-all hover:bg-accent/90 shadow-xl"
+    >
+      Book Service Now <span>→</span>
+    </Link>
+  </motion.div>
 
+  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+    <Link
+      to="/services"
+      className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/40 px-8 py-4 text-lg font-bold text-white transition-all hover:bg-white/10"
+    >
+      View Services
+    </Link>
+  </motion.div>
+</div>
                   {/* Trust Badges */}
                   <div className="flex flex-wrap gap-6 text-sm text-gray-400">
                     <div className="flex items-center gap-2">
